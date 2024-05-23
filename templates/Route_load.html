@@ -99,6 +99,13 @@
           </div>
         </div>
       </nav>
+    {% if msg %}
+    <h1>Upcoming Buses</h1>
+    <div class="bus-container">
+      <a><h2>{{msg}}</h2></a>
+    </div>
+
+    {% else%}
     <h1>Upcoming Buses</h1>
 
    {% for times in time %}
@@ -120,6 +127,29 @@
         </div>
     </form>
 {% endfor %}
+{%endif %}
+
+
+  <h1>Available Buses</h1>
+  {% for Routeload in Route %}
+    <form action="{% url 'Map_Load' %}" method="get" class="bus-container-form">
+        <div class="bus-container">
+            <a  onclick="event.preventDefault(); this.closest('form').submit();"><h2>{{ Routeload.Routes }}</h2></a>
+            <p>Departure Time: {{ Routeload.time1 }}</p>
+            {% if times.time10%}
+            <p>Destination Time: {{ Routeload.time10 }}</p>
+            
+            {% else %}
+            <p>Destination Time: {{ Routeload.time9 }}</p>
+            
+            
+            {% endif %}
+
+            <input type="hidden" name="routes" value="{{ Routeload.Routes }}">
+            <input type="hidden" name="departure_times" value="{{ Routeload.time1 }}">
+        </div>
+      </form>
+       {% endfor %}
 
 
     <script>
