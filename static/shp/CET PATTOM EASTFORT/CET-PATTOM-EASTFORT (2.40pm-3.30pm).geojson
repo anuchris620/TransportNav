@@ -1,0 +1,24 @@
+{
+"type": "FeatureCollection",
+"name": "2",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "BUS STOP": "CET", "TIME": "02:40 PM" }, "geometry": { "type": "Point", "coordinates": [ 76.905149723000079, 8.546574509000038, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "AYURVEDIC COLLEGE", "TIME 15": "3.27pm" }, "geometry": { "type": "Point", "coordinates": [ 76.947128622000037, 8.491092963000028, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "SREEKARYAM ROAD 1", "TIME 15": "2.50pm" }, "geometry": { "type": "Point", "coordinates": [ 76.921265880000078, 8.547887957000057, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "SREEKARYAM BUS STOP MAIN", "TIME 15": "2.54pm" }, "geometry": { "type": "Point", "coordinates": [ 76.916164008000067, 8.548862445000054, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "CHAVADIMUKU", "TIME 15": "2.46pm" }, "geometry": { "type": "Point", "coordinates": [ 76.911223283000083, 8.550848722000069, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "ALATHARA", "TIME 15": "2.42pm" }, "geometry": { "type": "Point", "coordinates": [ 76.907351766000033, 8.548233929000048, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "STATUE", "TIME 15": "3.28pm" }, "geometry": { "type": "Point", "coordinates": [ 76.948376138000071, 8.497044367000058, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "PONGUMOODU BUS STOP", "TIME 15": "2.57pm" }, "geometry": { "type": "Point", "coordinates": [ 76.926282988000082, 8.537372083000037, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "PLAMMOODU BUS STOP", "TIME 15": "3.09pm" }, "geometry": { "type": "Point", "coordinates": [ 76.946092629000077, 8.514091468000061, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "PALAYAM", "TIME 15": "3.26pm" }, "geometry": { "type": "Point", "coordinates": [ 76.951159540000049, 8.504749433000029, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "PMG ROAD", "TIME 15": "3.24pm" }, "geometry": { "type": "Point", "coordinates": [ 76.949667336000061, 8.50852814700005, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "EASTFORT", "TIME 15": "3.30pm" }, "geometry": { "type": "Point", "coordinates": [ 76.94783000700005, 8.483566526000061, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "PATTOM PSC BUS STOP", "TIME 15": "3.19pm" }, "geometry": { "type": "Point", "coordinates": [ 76.941748899000061, 8.519766347000029, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "PATTOM GIRLS SCHOOL BUS STOP", "TIME 15": "3.16pm" }, "geometry": { "type": "Point", "coordinates": [ 76.940422411000043, 8.523105567000073, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "PATTOM ST MARYS BUS STOP", "TIME 15": "3.06pm" }, "geometry": { "type": "Point", "coordinates": [ 76.938935958000059, 8.526313912000035, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "KESHAVADASAPURAM", "TIME 15": "3.03pm" }, "geometry": { "type": "Point", "coordinates": [ 76.936883726000076, 8.529621987000041, 0.0 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "ULLOOR BUS STOP", "TIME 15": "3.00pm" }, "geometry": { "type": "Point", "coordinates": [ 76.928794751000055, 8.530222236000043, 0.0 ] } }
+]
+}

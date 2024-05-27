@@ -1,0 +1,33 @@
+{
+"type": "FeatureCollection",
+"name": "6",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "BUS STOP": "CET", "TIME": "06:35 AM" }, "geometry": { "type": "Point", "coordinates": [ 76.90532562508929, 8.546757582880973 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "Eastfort", "TIME 1": "7.17am" }, "geometry": { "type": "Point", "coordinates": [ 76.94763102, 8.48428673 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "Ayurvedic college", "TIME 1": "7.15am" }, "geometry": { "type": "Point", "coordinates": [ 76.947121302623913, 8.49102118731042 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "MG road", "TIME 1": "7.13am" }, "geometry": { "type": "Point", "coordinates": [ 76.948380508884526, 8.496989315025997 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "palayam", "TIME 1": "7.11am" }, "geometry": { "type": "Point", "coordinates": [ 76.949374158488197, 8.502720296739007 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "General Hospital", "TIME 1": "7.10am" }, "geometry": { "type": "Point", "coordinates": [ 76.94332098971968, 8.499326062844998 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "regional of orthophologyy", "TIME 1": "7.08am" }, "geometry": { "type": "Point", "coordinates": [ 76.940935578539026, 8.499352704028388 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "pattoor", "TIME 1": "7.06am" }, "geometry": { "type": "Point", "coordinates": [ 76.937240397419487, 8.497574985538002 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "pallimukku", "TIME 1": "7.04am" }, "geometry": { "type": "Point", "coordinates": [ 76.933610226498942, 8.496917769853404 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "pallimooku-2", "TIME 1": "7.03am" }, "geometry": { "type": "Point", "coordinates": [ 76.932466322906791, 8.496835292105715 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "Kannamoola", "TIME 1": "7.01am" }, "geometry": { "type": "Point", "coordinates": [ 76.931796386044553, 8.503100756185983 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "john cox", "TIME 1": "6.58am" }, "geometry": { "type": "Point", "coordinates": [ 76.931066635859963, 8.506566646954466 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "avittom road junction", "TIME 1": "6.56am" }, "geometry": { "type": "Point", "coordinates": [ 76.929661824220801, 8.508735231525899 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "kumarapuram", "TIME 1": "6.55am" }, "geometry": { "type": "Point", "coordinates": [ 76.928296853092718, 8.510937786548764 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "kumarapuram bus stop", "TIME 1": "6.54am" }, "geometry": { "type": "Point", "coordinates": [ 76.92747047127439, 8.513359240033591 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "kumarapuram bus stop 2", "TIME 1": "6.53am" }, "geometry": { "type": "Point", "coordinates": [ 76.927810423044036, 8.516912930354236 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "Medical college bus stop terminal", "TIME 1": "6.50am" }, "geometry": { "type": "Point", "coordinates": [ 76.930070938419078, 8.522207788106888 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "medical college 2", "TIME 1": "6.46am" }, "geometry": { "type": "Point", "coordinates": [ 76.929430803106413, 8.524375777243828 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "ulloor", "TIME 1": "6.44am" }, "geometry": { "type": "Point", "coordinates": [ 76.928839804855258, 8.530948594381817 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "pongumoodu", "TIME 1": "6.42am" }, "geometry": { "type": "Point", "coordinates": [ 76.926277726226886, 8.537351675924992 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "pongumoodu main bus stop", "TIME 1": "6.41am" }, "geometry": { "type": "Point", "coordinates": [ 76.924379415221424, 8.540404583313077 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "sreekaryam 1", "TIME 1": "6.39am" }, "geometry": { "type": "Point", "coordinates": [ 76.921263334049243, 8.547880848799505 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "sreekaryam 2", "TIME 1": "6.38am" }, "geometry": { "type": "Point", "coordinates": [ 76.915089927281585, 8.549382984111087 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "chavadimuku", "TIME 1": "6.37am" }, "geometry": { "type": "Point", "coordinates": [ 76.911312890462881, 8.551005229547432 ] } },
+{ "type": "Feature", "properties": { "BUS STOP": "alathara", "TIME 1": "6.36am" }, "geometry": { "type": "Point", "coordinates": [ 76.907338313306937, 8.548233715063335 ] } }
+
+]
+}
