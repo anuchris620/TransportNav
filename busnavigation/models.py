@@ -45,3 +45,13 @@ class Stops(models.Model):
     Stop10=models.CharField(max_length=200,blank=True)
     def __str__(self):
         return self.Route
+    
+
+class User(models.Model):
+    Name=models.CharField(max_length=200)
+    Phone_No=models.CharField(max_length=200)
+    Email_id=models.CharField(max_length=200)
+    User_Name=models.CharField(max_length=200)
+    Password=models.CharField(max_length=200)
+    def __str__(self):
+        return self.Name

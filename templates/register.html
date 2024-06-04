@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <!-- Include Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .registration-container {
+      max-width: 350px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .registration-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .registration-container input[type="text"],
+    .registration-container input[type="tel"],
+    .registration-container input[type="email"],
+    .registration-container input[type="password"] {
+      width: calc(100% - 10px);
+      padding: 20px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .registration-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #14b33c;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .registration-container input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .error-message {
+      color: red;
+      display: none;
+    }
+
+    .password-eye-icon {
+      position: absolute;
+      top: 40%;
+      right: 20px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 25px;
+    }
+
+    input[type="password"] {
+      padding-right: 40px; /* Adjust the padding to accommodate the eye icon */
+    }
+  </style>
+</head>
+<body>
+  <div class="registration-container">
+    <h2>Registration</h2>
+    <form action="{% url 'register' %}" method="post" onsubmit="return validateForm()">
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="tel" name="phone" id="phone" placeholder="Phone No" required>
+      <span class="error-message" id="phone-error">Phone number should be 10 digits</span>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input type="text" name="username" placeholder="Username" required>
+     
+      <div style="position:relative;">
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <span class="password-eye-icon" id="password-eye" onclick="togglePasswordVisibility('password')">
+          <i class="far fa-eye"></i>
+        </span>
+      </div>
+      <div style="position:relative;">
+        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+        <span class="password-eye-icon" id="confirm_password-eye" onclick="togglePasswordVisibility('confirm_password')">
+          <i class="far fa-eye"></i>
+        </span>
+      </div>
+      <input type="submit" value="Register">
+    </form>
+    <p class="error-message" id="required-msg">All fields are mandatory.</p>
+    <p>If you are already registered, please <a href="login.html">login</a> to access your account.</p>
+  </div>
+
+  <script>
+    function validateForm() {
+      var phone = document.getElementById('phone').value;
+      var password = document.getElementById('password').value;
+      var confirm_password = document.getElementById('confirm_password').value;
+
+      var phoneError = document.getElementById('phone-error');
+      var passwordMatchError = document.getElementById('password-match-error');
+      var requiredMsg = document.getElementById('required-msg');
+
+      var isValid = true;
+
+      if (phone.length !== 10) {
+        phoneError.style.display = 'block';
+        isValid = false;
+      } else {
+        phoneError.style.display = 'none';
+      }
+
+      if (password !== confirm_password) {
+        passwordMatchError.style.display = 'block';
+        isValid = false;
+      } else {
+        passwordMatchError.style.display = 'none';
+      }
+
+      if (phone === '' || password === '' || confirm_password === '') {
+        requiredMsg.style.display = 'block';
+        isValid = false;
+      } else {
+        requiredMsg.style.display = 'none';
+      }
+
+      return isValid;
+    }
+
+    function togglePasswordVisibility(inputId) {
+      var input = document.getElementById(inputId);
+      var eyeIcon = document.getElementById(inputId + '-eye');
+      if (input.type === 'password') {
+        input.type = 'text';
+        eyeIcon.innerHTML = '<i class="far fa-eye-slash"></i>'; // Closed eye icon
+      } else {
+        input.type = 'password';
+        eyeIcon.innerHTML = '<i class="far fa-eye"></i>'; // Open eye icon
+      }
+    }
+   
+  </script>
+</body>
+</html>

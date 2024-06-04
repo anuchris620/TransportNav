@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from datetime import datetime, time
-from busnavigation.models import Stops_time,CET_PATTOM_EASTFORT,Stops
+from busnavigation.models import Stops_time,CET_PATTOM_EASTFORT,Stops,User
 import folium,json,os
 from django.views import View
 import asyncio
@@ -14,7 +14,8 @@ import winsdk.windows.devices.geolocation as wdg
 
 def index(request):
     return render(request,'index.html')
-     
+
+
 def Route_Load(request):
     Departure = request.GET.get('start')
     Destination = request.GET.get('destination')
@@ -201,7 +202,7 @@ def Route_Load(request):
 
 
     if Departure in Route3 and Destination in Route3:
-        start_position= Route3.index(Departure)
+        start_position=Route3.index(Departure)
         end_position=Route3.index(Destination)
         if start_position < end_position: 
             Route_sel=["CET PATTOM EASTFORT"]
@@ -358,6 +359,7 @@ def Map_Load(request):
     
     # Render the map using a template
     return render(request,'map_load2.html',{'timevalue':timevalue, 'Db_Stops': Db_Stops,'stops':stops,'context':context,'Route_name':Route_name})
+
     icon=folium.CustomIcon(custom_icon_path, icon_size=(20, 40))
 
 
@@ -427,34 +429,39 @@ def Map_Load(request):
     return render(request,'map_load2.html',{'timevalue':timevalue, 'Db_Stops': Db_Stops,'stops':stops,'context':context})"""
 
 
-def home(request):
-    
-    shp_dir = os.path.join(os.getcwd(), 'static', 'shp')
-    m = folium.Map(location=[8.545355038, 76.90665681], zoom_start=7)
-    
-    # Define a style for your GeoJSON features
-    style_basin = {'fillColor': 'transparent', 'color': '#003d99'}
-    
-    # Load the GeoJSON file
-    geojson_file = os.path.join(shp_dir, 'CET-KANNAMOOLA-EASTFORT(1.15PM-1.57PM).geojson')
-    
-    # Add GeoJSON features to the map
-    with open(geojson_file, 'r') as f:
-        data = f.read()
-        geojson = folium.GeoJson(data)
-        m.add_child(geojson)
-        
-    folium.LayerControl().add_to(m)
-    
-    # Export the map to HTML
-    m_html = m._repr_html_()
-    
-    context = {'my_map': m_html}
-    
-    # Render the map using a template
+def login(request):
+    return render(request,'signin.html')
 
-    ## rendering
-    return render(request,'map_load2.html',{'context':context})
+
+def loadregister(request):
+    return render(request,'register.html')
+
+
+def register(request):
+    Name=request.POST['name']
+    PhoneNo=request.POST['phone']
+    Email=request.POST['email']
+    Username=request.POST['username']
+    Password=request.POST['password']
+
+    if User.objects.filter(Phone_No=PhoneNo).exists():
+        msg="user already registered"
+        return render(request,'register.html',{'msg':msg})
+    else:
+        Usercreate=User(Name=Name,Phone_No=PhoneNo,Email_id=Email,User_Name=Username,Password=Password)
+        Usercreate.save()
+        return render(request,'index.html',{'Name':Name})
+
+
+
+
+
+
+    
+
+
+    
+    
 
 
 
